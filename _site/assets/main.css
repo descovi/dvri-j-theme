@@ -143,35 +143,26 @@ a:hover {
 #pagina-caffe .due {
   background-color: #FFFEFE; }
 
-#pagina-intro-social-events {
-  background-color: rgba(12, 24, 44, 0.85); }
-  #pagina-intro-social-events .background-image {
-    background-image: url("venetonight.jpg"); }
-  #pagina-intro-social-events h2 {
+#pagina-intro-diventa-socio {
+  background-color: rgba(40, 0, 40, 0.5); }
+  #pagina-intro-diventa-socio h2 {
     color: #fff;
     font-weight: lighter;
     letter-spacing: 2px;
-    text-transform: lowercase;
-    font-size: 40px; }
+    font-size: 50px;
+    font-family: monospace; }
     @media (max-width: 640px) {
-      #pagina-intro-social-events h2 {
+      #pagina-intro-diventa-socio h2 {
         font-size: 30px; } }
-  #pagina-intro-social-events a {
+  #pagina-intro-diventa-socio a {
     color: #fff;
     font-weight: lighter !important;
     text-decoration: none; }
-  #pagina-intro-social-events p {
-    font-size: 20px;
-    text-transform: lowercase;
-    font-weight: 400; }
-
-#pagina-social-events h3 {
-  color: #00307d;
-  font-weight: lighter; }
-#pagina-social-events h4 {
-  color: #009ed2;
-  font-weight: lighter;
-  letter-spacing: 2px; }
+  #pagina-intro-diventa-socio p {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #C9C9C9; }
 
 #pagina-intro-video-makars {
   background-color: #e37222;
@@ -505,7 +496,8 @@ a:hover {
     color: #009ed2;
     letter-spacing: 2px; }
   #pagina-arte-marine strong {
-    color: #009ed2; }
+    color: #009ed2;
+    margin-bottom: 10px; }
   #pagina-arte-marine a {
     text-decoration: underline;
     text-transform: uppercase; }
@@ -632,3 +624,33 @@ a:hover {
   background-color: #2f4454; }
   #body-pagina-entigalassie #header a {
     color: #D1E8E2; }
+
+#pagina-intro-social-events {
+  background-color: rgba(12, 24, 44, 0.85);
+  color: #fff; }
+  #pagina-intro-social-events h2 {
+    color: #fff;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    font-size: 40px; }
+    @media (max-width: 640px) {
+      #pagina-intro-social-events h2 {
+        font-size: 30px; } }
+  #pagina-intro-social-events a {
+    color: #fff;
+    font-weight: lighter !important;
+    text-decoration: none; }
+  #pagina-intro-social-events p {
+    color: #fff;
+    font-size: 20px;
+    text-transform: lowercase;
+    font-weight: 400; }
+
+#pagina-social-events h3 {
+  color: #00307d;
+  font-weight: lighter; }
+#pagina-social-events h4 {
+  color: #009ed2;
+  font-weight: lighter;
+  letter-spacing: 2px; }
