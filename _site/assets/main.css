@@ -187,58 +187,58 @@ a:hover {
 #pagina-video-makars img {
   margin-bottom: 10px; }
 
-#pagina-intro-science-gallery {
+#pagina-intro-arte-scienza {
   background-color: rgba(80, 80, 80, 0.5); }
-  #pagina-intro-science-gallery .background-image {
+  #pagina-intro-arte-scienza .background-image {
     background-image: url("venetonight.jpg"); }
-  #pagina-intro-science-gallery h2 {
+  #pagina-intro-arte-scienza h2 {
     color: #fff;
     font-weight: lighter;
     letter-spacing: 8px;
     text-transform: uppercase;
     font-size: 40px; }
-  #pagina-intro-science-gallery a {
+  #pagina-intro-arte-scienza a {
     color: #fff;
     font-weight: lighter !important;
     text-decoration: none; }
-  #pagina-intro-science-gallery p {
+  #pagina-intro-arte-scienza p {
     font-family: Monaco;
     letter-spacing: 10px;
     color: #ccc;
     font-style: italic; }
     @media (max-width: 640px) {
-      #pagina-intro-science-gallery p {
+      #pagina-intro-arte-scienza p {
         letter-spacing: 2px; } }
 
-#pagina-science-gallery h3 {
+#pagina-intro-arte-scienza h3 {
   margin-top: 20px;
   background-color: #000;
   text-transform: uppercase;
   font-size: 12px;
   padding: 10px;
   color: #fff; }
-  #pagina-science-gallery h3 a {
+  #pagina-intro-arte-scienza h3 a {
     color: #fff; }
-  #pagina-science-gallery h3 a:hover {
+  #pagina-intro-arte-scienza h3 a:hover {
     text-decoration: underline; }
-#pagina-science-gallery img {
+#pagina-intro-arte-scienza img {
   margin-bottom: 10px;
   margin-top: -10px; }
-#pagina-science-gallery iframe {
+#pagina-intro-arte-scienza iframe {
   margin-top: -10px; }
-#pagina-science-gallery a {
+#pagina-intro-arte-scienza a {
   color: #ED1A91; }
-#pagina-science-gallery hr {
+#pagina-intro-arte-scienza hr {
   margin: 50px 20%;
   border-style: dotted; }
-#pagina-science-gallery ul {
+#pagina-intro-arte-scienza ul {
   padding-left: 16px; }
-#pagina-science-gallery img {
+#pagina-intro-arte-scienza img {
   border-radius: 0; }
-#pagina-science-gallery .rassegna-stampa {
+#pagina-intro-arte-scienza .rassegna-stampa {
   padding-left: 0;
   margin-left: 0; }
-  #pagina-science-gallery .rassegna-stampa li {
+  #pagina-intro-arte-scienza .rassegna-stampa li {
     padding-top: 5px;
     padding-bottom: 5px;
     list-style-type: none; }
