@@ -227,7 +227,9 @@ a:hover {
   margin-bottom: 10px; }
 
 #pagina-intro-arte-scienza {
-  background-color: rgba(80, 80, 80, 0.5); }
+  background-color: rgba(80, 80, 80, 0.5);
+  padding-right: 5%;
+  padding-left: 5%; }
   #pagina-intro-arte-scienza .background-image {
     background-image: url("venetonight.jpg"); }
   #pagina-intro-arte-scienza h2 {
@@ -541,6 +543,63 @@ a:hover {
     text-decoration: underline;
     text-transform: uppercase; }
   #pagina-arte-marine a:hover {
+    color: #044c72; }
+
+.button {
+  width: 100%;
+  text-align: center;
+  font-size: 27px;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #009ed2;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center; }
+
+.link {
+  color: #ffffff;
+  text-decoration: none !important; }
+
+.link:hover {
+  color: #ffffff; }
+
+#pagina-intro-arte-marine-2 {
+  background-color: rgba(240, 81, 33, 0.8);
+  padding-right: 5%;
+  padding-left: 5%; }
+  #pagina-intro-arte-marine-2 h2 {
+    font-family: "Geneva", "Monaco", "Courier New";
+    font-size: 42px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-style: italic; }
+  #pagina-intro-arte-marine-2 p {
+    color: #fff;
+    font-family: "Geneva", "Monaco", "Courier New";
+    font-size: 18px;
+    letter-spacing: 1px; }
+
+#pagina-arte-marine2 {
+  max-width: 590px; }
+  #pagina-arte-marine2 img {
+    min-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 3px; }
+  #pagina-arte-marine2 h3 {
+    color: #00307d; }
+  #pagina-arte-marine2 h4 {
+    color: #009ed2;
+    letter-spacing: 2px; }
+  #pagina-arte-marine2 strong {
+    color: #009ed2;
+    margin-bottom: 10px; }
+  #pagina-arte-marine2 a {
+    text-decoration: underline;
+    text-transform: uppercase; }
+  #pagina-arte-marine2 a:hover {
     color: #044c72; }
 
 .button {
