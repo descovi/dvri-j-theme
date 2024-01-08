@@ -251,38 +251,40 @@ a:hover {
       #pagina-intro-arte-scienza p {
         letter-spacing: 2px; } }
 
-#pagina-arte-scienza h3 {
-  margin-top: 20px;
-  background-color: #000;
-  text-transform: uppercase;
-  font-size: 12px;
-  padding: 10px;
-  color: #fff; }
-  #pagina-arte-scienza h3 a {
+#pagina-arte-scienza {
+  max-width: 790px; }
+  #pagina-arte-scienza h3 {
+    margin-top: 20px;
+    background-color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
     color: #fff; }
-  #pagina-arte-scienza h3 a:hover {
-    text-decoration: underline; }
-#pagina-arte-scienza img {
-  margin-bottom: 10px;
-  margin-top: -10px; }
-#pagina-arte-scienza iframe {
-  margin-top: -10px; }
-#pagina-arte-scienza a {
-  color: #ED1A91; }
-#pagina-arte-scienza hr {
-  margin: 50px 20%;
-  border-style: dotted; }
-#pagina-arte-scienza ul {
-  padding-left: 16px; }
-#pagina-arte-scienza img {
-  border-radius: 0; }
-#pagina-arte-scienza .rassegna-stampa {
-  padding-left: 0;
-  margin-left: 0; }
-  #pagina-arte-scienza .rassegna-stampa li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    list-style-type: none; }
+    #pagina-arte-scienza h3 a {
+      color: #fff; }
+    #pagina-arte-scienza h3 a:hover {
+      text-decoration: underline; }
+  #pagina-arte-scienza img {
+    margin-bottom: 10px;
+    margin-top: -10px; }
+  #pagina-arte-scienza iframe {
+    margin-top: -10px; }
+  #pagina-arte-scienza a {
+    color: #ED1A91; }
+  #pagina-arte-scienza hr {
+    margin: 50px 20%;
+    border-style: dotted; }
+  #pagina-arte-scienza ul {
+    padding-left: 16px; }
+  #pagina-arte-scienza img {
+    border-radius: 0; }
+  #pagina-arte-scienza .rassegna-stampa {
+    padding-left: 0;
+    margin-left: 0; }
+    #pagina-arte-scienza .rassegna-stampa li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      list-style-type: none; }
 
 .footer-container {
   padding-top: 20px;
@@ -526,7 +528,7 @@ a:hover {
     letter-spacing: 1px; }
 
 #pagina-arte-marine {
-  max-width: 590px; }
+  max-width: 790px; }
   #pagina-arte-marine img {
     min-width: 100%;
     margin-bottom: 10px;
