@@ -35,7 +35,7 @@ defaults:
 
 enviroment: production
 permalink: "/:title:output_ext"
-url: "http://distrettovenezianoricerca.it"
+url: "https://distrettovenezianoricerca.it"
 exclude: [Gemfile,
           Gemfile.lock,
           node_modules,
