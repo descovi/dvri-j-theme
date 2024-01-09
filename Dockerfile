@@ -12,7 +12,7 @@ RUN gem install bundler -v 2.4.22
 RUN bundle install
 
 # Costruisci il sito con Jekyll
-RUN jekyll build
+# RUN jekyll build
 
 # Espone la porta 4000, che è la porta predefinita su cui Jekyll serve il sito
 EXPOSE 4000
