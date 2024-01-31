@@ -13,6 +13,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Cache Docker layers
+      uses: actions/cache@v2
+      with:
+        path: /tmp/.docker_layer_cache
+        key: ${{ runner.os }}-docker-layer-cache-${{ hashFiles('**/Dockerfile') }}
+        restore-keys: |
+          ${{ runner.os }}-docker-layer-cache-
+          ${{ runner.os }}-
+
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
