@@ -18,4 +18,4 @@ RUN bundle install
 EXPOSE 4000
 
 # Comando per eseguire il server Jekyll
-CMD ["jekyll", "serve"]
+CMD ["jekyll", "build"]
