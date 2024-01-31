@@ -40,4 +40,4 @@ jobs:
         ssh-keyscan dvri.rubynetti.it >> /home/runner/.ssh/known_hosts
     - name: Deploy to server
       run: |
-        scp -r ${{ github.workspace }}/_site/* staging@dvri.rubynetti.it:/var/www/dvri
+        rsync -avz -e "ssh -o StrictHostKeyChecking=no" --progress ${{ github.workspace }}/_site/ staging@dvri.rubynetti.it:/var/www/dvri
