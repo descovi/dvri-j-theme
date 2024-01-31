@@ -18,3 +18,6 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:3.8 /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Deploy to server
+      run: |
+        scp -r ${{ github.workspace }}/_site/* staging@dvri.rubynetti.it:/var/www/dvri
