@@ -23,7 +23,10 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-  
+    - name: Add server to known hosts
+      run: |
+        echo "dvri.rubynetti.it ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCSWdZNIFcFf2+Aei85ZviWJpxLHXVfcf2eUbIXCZziZ67ORFQBGx9X+Osd9olapLS//41lO1wmgpBUzwhsYbJuW9vQiRucykk1KPiz3R6m3LbLps2jNqDqs9RcLVRpf2migy5JR+ocbgruv4ANz0HfRNNVidCRkUzP+YIIhQacT/1ee+QZPbPrm5tlOi9SpXV+Eg1arGchIEMgG5spQ9gmfKbb85Chea3Ux5EPXHo2uytUBV/tEncawR5OTfLYtOQJKb3m9T6WT2uouY9tQ32w1dI6k56PeOpFGQ0D4rU2DvDmve/3QszFdthB6STsJJscrefK41cb7lilE2SLfhEJKKvGjoeBGtth9BHw29CJS4Sa9jLDTzypPsjgQn+T4ySprujLpg+Wn+/NBlIU7+vXZJ89NBvJ79d2NmQq9d/wvWOVp0mi2lo+L6hSQh5FOlP4TDsJQ8cnb+97MnZ6EUMyc9/jprr4bOooj1wudvl1NTM//4mQzJZJGGu5t5zNEkU=" >> ~/.ssh/known_hosts
+
     - name: Deploy to server
       run: |
         scp -r ${{ github.workspace }}/_site/* staging@dvri.rubynetti.it:/var/www/dvri
