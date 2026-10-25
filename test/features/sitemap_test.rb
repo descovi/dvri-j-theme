@@ -9,8 +9,8 @@ class SitemapTest < CapybaraTestCase
       docs.remove_namespaces!
       locs = docs.xpath("//loc")
       contents =  locs.map{|loc|loc.content}
-      assert_includes contents, 'http://distrettovenezianoricerca.it/irene-scarpa.html'
-      assert_includes contents, 'http://distrettovenezianoricerca.it/progetti/caffe-2018.html'
+      assert_includes contents, 'https://dvri.rubynetti.it/irene-scarpa.html'
+      assert_includes contents, 'https://dvri.rubynetti.it/progetti/caffe-2018.html'
     end
   end
 end

@@ -20,17 +20,5 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:3.8 /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-    
-    - name: Install SSH key
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Remove old host key
-      run: |
-        ssh-keygen -f "/home/runner/.ssh/known_hosts" -R "dvri.rubynetti.it"
-    - name: Add new host key
-      run: |
-        ssh-keyscan dvri.rubynetti.it >> /home/runner/.ssh/known_hosts
-    - name: Deploy to server
-      run: |
-        rsync -az -e "ssh -o StrictHostKeyChecking=no" --progress ${{ github.workspace }}/_site/ staging@dvri.rubynetti.it:/var/www/dvri
+
+    # La pubblicazione è manuale: vedi "Per pubblicare" nel README.

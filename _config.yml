@@ -35,7 +35,8 @@ defaults:
 
 enviroment: production
 permalink: "/:title:output_ext"
-url: "https://distrettovenezianoricerca.it"
+# Archivio del vecchio sito: il DVRI ora ha un sito nuovo su distrettovenezianoricerca.it.
+url: "https://dvri.rubynetti.it"
 exclude: [Gemfile,
           Gemfile.lock,
           node_modules,
