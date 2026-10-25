@@ -1,0 +1,58 @@
+---
+layout: page
+page_id: archivio
+title: Archivio
+claim: Dieci anni di progetti, eventi e articoli del DVRI
+toc: false
+---
+
+<p>Questo sito è l'archivio del vecchio sito del Distretto Veneziano della Ricerca e dell'Innovazione, attivo dal 2016 al 2024. Il sito attuale del DVRI è <a href="https://www.distrettovenezianoricerca.it/">distrettovenezianoricerca.it</a>. In questa pagina trovi le sezioni che negli anni sono uscite dalla home e tutti gli articoli del vecchio blog.</p>
+
+<h3>Sezioni</h3>
+<ul>
+  <li><a href="{{ site.baseurl }}/progetti/arte-scienza.html">Science Gallery</a> (in home dal 2016 al 2020): dal 2022 la pagina si chiama <em>Arte e Scienza</em>.</li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events.html">La notte dei ricercatori</a> (dal 2016 al 2018): dal 2018 i suoi contenuti fanno parte dei <em>Social Events</em>. Vedi anche l'articolo su <a href="{{ site.baseurl }}/VENETONIGHT.html">Venetonight</a>.</li>
+  <li><a href="{{ site.baseurl }}/progetti/video-makars.html">#VideomakARS</a>, Venice Edition (dal 2016 al 2020).</li>
+  <li><a href="{{ site.baseurl }}/progetti/smart-passport.html">SMArt Passport</a>, nata nel 2017 come DVRI CARD (fino al 2022). Il servizio è concluso.</li>
+  <li><a href="{{ site.baseurl }}/progetti/entigalassie.html">DVRI in Musica</a>: TIERKREIS, gli enti del DVRI suonano le galassie di Stockhausen (2020).</li>
+  <li><a href="{{ site.baseurl }}/progetti/cultural_galaxies.html">Galaxies of Culture</a>, con l'<a href="https://galassie.rubynetti.it/space/welcome">archivio interattivo</a> delle istituzioni culturali di Venezia.</li>
+</ul>
+
+<h3>L'arte delle Scienze Marine</h3>
+<ul>
+  <li><a href="{{ site.baseurl }}/progetti/arte_scienze_marine.html">Educazione alla sostenibilità</a>: la Mostra-Laboratorio e i workshop</li>
+  <li><a href="{{ site.baseurl }}/progetti/arte_scienze_marine_2019.html">Edizione 2019</a>: gli Oceani ritratti da artisti e ricercatori</li>
+  <li><a href="{{ site.baseurl }}/progetti/arte_scienze_marine_2021.html">Edizione 2021</a>: il Pianeta Blu si tinge di rosso</li>
+  <li><a href="{{ site.baseurl }}/progetti/arte_scienze_marine_2023.html">Edizione 2023</a>: ArsMar, Palazzina Canonica</li>
+  <li><a href="{{ site.baseurl }}/progetti/arte_scienze_marine_2025.html">Edizione 2025</a>: Bio≠, sulla biodiversità</li>
+</ul>
+
+<h3>Caffè dell'Innovazione</h3>
+<ul>
+  <li><a href="{{ site.baseurl }}/progetti/caffe.html">Eventi, attività e Caffè dell'Innovazione</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/caffe-2016-1.html">Giugno 2016</a>: Venezia in Campo, 1ª edizione</li>
+  <li><a href="{{ site.baseurl }}/progetti/caffe-2016-2.html">Settembre 2016</a>: Venezia in Campo, 2ª edizione</li>
+  <li><a href="{{ site.baseurl }}/progetti/caffe-2017.html">2017</a>: Venezia in Campo, 3ª edizione</li>
+  <li><a href="{{ site.baseurl }}/progetti/caffe-2018.html">2018</a>: Labs 4 Change, 4ª edizione</li>
+  <li><a href="{{ site.baseurl }}/progetti/caffe-2019.html">2019</a></li>
+</ul>
+
+<h3>Social Events</h3>
+<ul>
+  <li><a href="{{ site.baseurl }}/progetti/social-events.html">Social Events</a>: condividere significati per generare valore</li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2013.html">2013</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2014.html">2014</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2015.html">2015</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2016.html">2016</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2017.html">2017</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2018.html">2018</a> e <a href="{{ site.baseurl }}/progetti/social-events-2018-ottobre.html">ottobre 2018</a></li>
+  <li><a href="{{ site.baseurl }}/progetti/social-events-2019.html">2019</a>: il DVRI per Mental Recycling di Science Gallery Venice, e <a href="{{ site.baseurl }}/progetti/social-events-2019-ottobre.html">ottobre 2019</a>: Earth Water Sky in Conversation</li>
+</ul>
+
+<h3>Il vecchio blog</h3>
+<p>Gli articoli pubblicati su questo sito dal 2016 al 2020. Il blog più recente del DVRI è su <a href="https://dvri.substack.com/">Substack</a>.</p>
+<ul>
+{% for post in site.posts %}
+  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y" }})</li>
+{% endfor %}
+</ul>
