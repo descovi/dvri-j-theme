@@ -47,4 +47,9 @@ exclude: [Gemfile,
           test/,
           LICENSE.txt,
           Rakefile,
-          README.md]
+          README.md,
+          CNAME,
+          Dockerfile,
+          docker-compose.yml,
+          dvri-j.gemspec,
+          script/]

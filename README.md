@@ -17,9 +17,13 @@ distrettovenezianoricerca.it). È servito da `nginx_web` sul server Finlandia,
 dalla cartella `/var/www/static-sites/dvri/site`:
 
 ```sh
-bundle exec jekyll build
-rsync -a --delete _site/ dev@finlandia.rubynetti.it:/var/www/static-sites/dvri/site/
+script/deploy
 ```
+
+Lo script richiede un commit già pushato su master: costruisce il sito sul
+server, con la stessa immagine Docker della GitHub Action, e lo sincronizza in
+`site/`. Non costruire sul Mac e copiare `_site`: i nomi di file con accenti
+cambierebbero forma Unicode e le immagini non verrebbero più trovate.
 
 La GitHub Action verifica solo che il sito si costruisca: fino a ottobre 2026
 pubblicava sul vecchio server DigitalOcean, ora dismesso. `url` in

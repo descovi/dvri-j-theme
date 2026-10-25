@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Pubblica su https://dvri.rubynetti.it il commit corrente, già pushato su master.
+# La build avviene sul server: costruendo sul Mac, i nomi di file con accenti
+# cambierebbero forma Unicode e non corrisponderebbero più ai link.
+set -euo pipefail
+
+host=${DEPLOY_HOST:-dev@finlandia.rubynetti.it}
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+[[ -z "$(git status --porcelain)" ]] || { echo 'Committa le modifiche prima di pubblicare.' >&2; exit 1; }
+git fetch -q origin master
+rev=$(git rev-parse HEAD)
+[[ "$rev" == "$(git rev-parse origin/master)" ]] || { echo 'Pusha su master prima di pubblicare.' >&2; exit 1; }
+
+ssh -o BatchMode=yes "$host" bash -s -- "$rev" <<'REMOTE'
+set -euo pipefail
+rev=$1
+base=/var/www/static-sites/dvri
+src=$base/src
+[[ -d $src/.git ]] || git clone -q https://github.com/descovi/dvri-j-theme.git "$src"
+git -C "$src" fetch -q origin master
+git -C "$src" checkout -q --detach "$rev"
+
+build=$(mktemp -d "$base/build.XXXXXX")
+cleanup() { docker run --rm -v "$build:/b" busybox sh -c 'rm -rf /b/* /b/.[!.]*' >/dev/null 2>&1 || true; rmdir "$build" 2>/dev/null || true; }
+trap cleanup EXIT
+git -C "$src" archive "$rev" | tar -x -C "$build"
+docker run --rm -v "$build:/srv/jekyll" jekyll/builder:3.8 \
+  bash -c 'chmod -R 777 /srv/jekyll && jekyll build --future' >/dev/null
+test -s "$build/_site/index.html"
+grep -q 'rel="canonical" href="https://dvri.rubynetti.it/' "$build/_site/index.html"
+
+rsync -rlt --delete --chmod=D755,F644 "$build/_site/" "$base/site/"
+printf '%s\n' "$rev" > "$base/last-deploy"
+curl -fsS -o /dev/null --resolve dvri.rubynetti.it:443:127.0.0.1 https://dvri.rubynetti.it/
+echo "Pubblicato: $rev"
+REMOTE
